@@ -5,7 +5,7 @@ theme = "minimal"
 
 [params]
     author = "onyou"
-    description = "공유로 서로의 삽질을 줄여주는 아름다운 세상"
+    description = "서로의 삽질을 공유로 줄여주는 아름다운 세상"
     githubUsername = "#"
     accent = "blue"
     showBorder = true
