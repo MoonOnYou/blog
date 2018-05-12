@@ -22,7 +22,7 @@ hugo server -D=true
  
  3. 베포 스크립트 만들기 
  - 스크립트 내용
- ```sh
+```sh
  #!/bin/bash
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
@@ -48,7 +48,6 @@ git push origin master
 # Come Back up to the Project Root
 cd ..
 
-
 git add .
 
 # Commit changes.
@@ -61,12 +60,12 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin master
 
- ```
+```
 
  4. 스크립트 실행 방법
 
  위의 스크립트를 deploy.sh (제목상관없음) 파일에 저장한 후 아래 명령을 실행한다.
- ```sh
+```sh
 # deploy.sh 파일에 user 실행권한 주기, 최초 1회만 실행 
 sudo chmod u+x deploy.sh
 
@@ -74,7 +73,7 @@ sudo chmod u+x deploy.sh
 ./deploy.sh
  ```
  * 블로그 글 md 파일에서 글 속성 중 draft가 false인 것만 배포가 된다.
- ```sh
+```sh
  ex) 
  title: "First"
 date: 2018-05-12T22:22:46+09:00
