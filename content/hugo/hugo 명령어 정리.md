@@ -20,9 +20,10 @@ hugo new 폴더이름/글제목.md
   - hugo프로젝트 최상위 폴더에서 터미널을 연다.
 
 ```sh
-hugo server -D=true
+hugo server 또는 hugo server -D=true
 ```
-
+  *  -D=true는 "draft"가 "false"인 파일을 로컬환경에서 볼 수 있는 권한을 주는 것임
+  
   * 이렇게 하면 웹 브라우저에 http://localhost:1313/ 로 접속헤서 만들어진 페이지를 볼 수 있다.
   * 코드를 새로고침 할 때 마다 반영됨 (커밋은 안된 상태)
  
