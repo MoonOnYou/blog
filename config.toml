@@ -1,11 +1,11 @@
 baseURL = "https://MoonOnYou.github.io"
 languageCode = "en-us"
-title = "MoonOnYou's Site"
+title = "ONYOU'S  SITE"
 theme = "minimal"
 
 [params]
-    author = "MoonOnYou"
-    description = "온유의 블로그"
+    author = "onyou"
+    description = "공유로 서로의 삽질을 줄여주는 아름다운 세상"
     githubUsername = "#"
     accent = "blue"
     showBorder = true
@@ -17,21 +17,31 @@ theme = "minimal"
 
 [[menu.main]]
     url = "/"
-    name = "Home"
+    name = "ONYOU'S HOME"
     weight = 1
 
 [[menu.main]]
-    url = "/post/"
-    name = "Posts"
+    url = "/kotlin/"
+    name = "kotlin"
     weight = 2
 
+[[menu.main]]
+    url = "/python/"
+    name = "python"
+    weight = 3
+
+[[menu.main]]
+    url = "/hugo/"
+    name = "hugo"
+    weight = 4
+
 [[menu.icon]]
-    url = "mailto:me@example.com"
+    url = "mailto:onyou0031@naver.com"
     name = "envelope-o"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/username/"
+    url = "https://github.com/MoonOnYou/"
     name = "github"
     weight = 2
 
