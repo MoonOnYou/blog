@@ -17,7 +17,7 @@ weight: 1
 
 ----------------------------------------------------------
 
-## ___B___ [__b__reak,continue](#break,continue)  [__b__y](#by)  [__B__yteArray](#ByteArray)
+## ___B___  [__b__reak,continue](#break,continue) [__b__y](#by) [__B__yteArray](#ByteArray)
 
 ---------------------------------------------
 
