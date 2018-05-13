@@ -11,13 +11,12 @@ weight: 1
 ----------------------------------------------------
 -----------------------------------------------
 
-## ___A___
-## [__a__bsract](#absract) &nbsp; [__a__s,as?](#as,as?)
+## ___A___ &nbsp; [__a__bsract](#absract) &nbsp; [__a__s,as?](#as,as?)
 ## [__a__dd()](#add()) &nbsp; [__a__nd()](#and()) &nbsp; [__a__rrayListOf()](#arrayListOf()) &nbsp; [__a__rrayOf()](#arrayOf)
 
 ----------------------------------------------------------
 
-## ___B___  [__b__reak,continue](#break,continue) [__b__y](#by) [__B__yteArray](#ByteArray)
+## ___B___ &nbsp; [__b__reak,continue](#break,continue) [__b__y](#by) [__B__yteArray](#ByteArray)
 
 ---------------------------------------------
 
@@ -25,8 +24,7 @@ weight: 1
 
 -------------------------
 
-## ___D___
-## [__d__ata](#data) &nbsp;
+## ___D___ &nbsp; [__d__ata](#data) &nbsp;
 ## [__d__iv()](#div()) &nbsp;
 
 ----------------------------------
@@ -35,16 +33,13 @@ weight: 1
 
 -----------------------------------------------
 
-## _F_
-## [__f__inal](#final) &nbsp; [__f__inally](#finally) &nbsp; [__f__or](#for) &nbsp; [__f__un](#fun)
+## _F_ &nbsp; [__f__inal](#final) [__f__inally](#finally) [__f__or](#for) [__f__un](#fun)
 
 --------------------------
 ## _G_
 ## _H_
 ------------------------------------------
-## ___I___
-## [__i__f](#if) &nbsp; [__i__n](#in) &nbsp; [__i__nfix](#infix) &nbsp; [__i__nit](#init) &nbsp; [__i__nstanceof](#instanceof) &nbsp; [__i__nterface](#interface) &nbsp; [__i__s,is?](#is,is?) &nbsp; [__i__t](#it)
-## [__i__nvoke()](#invoke)
+## ___I___ &nbsp; [__i__f](#if) [__i__n](#in) [__i__nfix](#infix) [__i__nit](#init) [__i__nstanceof](#instanceof) [__i__nterface](#interface) [__i__s,is?](#is,is?) [__i__t](#it)  [__i__nvoke()](#invoke)
 --------------------------------------
 ## _G_
 ## _K_
