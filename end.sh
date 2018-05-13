@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Update local repos.
 git pull origin master
 
