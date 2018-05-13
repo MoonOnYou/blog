@@ -5,7 +5,8 @@ draft: false
 author: jinhwan
 tags: ["hugo"]
 ---
-터미널에 다음과 같이 입력하여 새로운 사이트를 생성 할 수 있다.
+> 터미널에 다음과 같이 입력하여 새로운 사이트를 생성 할 수 있다.
+
 ```bash
 jinhwan@JungJinHwan:~/work/hugo$ hugo new site <사이트 이름>
 ```
