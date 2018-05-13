@@ -23,3 +23,8 @@ else
     git clone https://github.com/calintat/minimal.git minimal
     cd ..
 fi
+git stash
+git checkout master
+git stash pop
+git pull origin master
+
