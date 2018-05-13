@@ -1,40 +1,41 @@
 #!/bin/bash
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
-git stash
-git checkout master
-git stash pop
+# 1. pull
+git pull origin master
+# 2. add
 git add .
-# Commit changes.
+
+# 3. Commit changes.
 msg="hugo md file changes ... `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
 git commit -m "$msg"
-git pull origin master
-cd public
-find . ! -name *.git -exec rm {} \;
-cd ..
+# 4. push
+git push origin master
 
-# Build the project.
+# 5. Build the project.
 hugo
 
-# Go To Public folder
+# 6. Go To Public folder
 cd public
 
-# Add changes to git.
+# 7. pull
+git pull origin master
+
+# 8. Add changes to git.
 git add .
 
-# Commit changes.
+# 9. Commit changes.
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
+# 10. Push source and build repos.
 git push origin master
 
-# Come Back up to the Project Root
+# 11. Come Back up to the Project Root
 cd ..
