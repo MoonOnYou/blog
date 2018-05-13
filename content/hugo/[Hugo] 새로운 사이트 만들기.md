@@ -1,15 +1,15 @@
 ---
 title: "[Hugo] 새로운 사이트 만들기"
 date: 2018-05-13T14:08:02+09:00
-draft: true
+draft: false
 author: jinhwan
-description: "hugo new site 명령어 알아보기"
 tags: ["hugo"]
 ---
-
+터미널에 다음과 같이 입력하여 새로운 사이트를 생성 할 수 있다.
 ```bash
-jinhwan@JungJinHwan:~/work/hugo$ hugo new site first_site
+jinhwan@JungJinHwan:~/work/hugo$ hugo new site <사이트 이름>
 ```
+
 ```
 Congratulations! Your new Hugo site is created in /home/jinhwan/work/hugo/first_site.
 
