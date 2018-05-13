@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ -e public/.git ]
 then 
     echo "public exists"
@@ -25,7 +26,5 @@ else
 fi
 git stash
 git checkout master
-git stash pop
 git pull origin master
-
-
+git stash pop

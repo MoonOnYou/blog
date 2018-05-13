@@ -21,5 +21,7 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin master
 
+git checkout .
+
 # Come Back up to the Project Root
 cd ..
