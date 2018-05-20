@@ -15,4 +15,5 @@ else
     git clone https://github.com/calintat/minimal.git minimal
     cd ..
 fi
+git git checkout master
 git pull origin master
