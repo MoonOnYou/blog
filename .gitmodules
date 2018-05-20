@@ -2,3 +2,7 @@
 	path = public
 	url = https://github.com/MoonOnYou/MoonOnYou.github.io.git
 	branch = master
+[submodule "content/Python"]
+	path = content/Python
+	url = https://github.com/JinHwanJung/Mblog_post_python
+	branch = master
