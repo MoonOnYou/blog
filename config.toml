@@ -26,16 +26,6 @@ disqusShortname = "onyous-blog"
     name = "kotlin"
     weight = 2
 
-[[menu.main]]
-    url = "/python/"
-    name = "python"
-    weight = 3
-
-[[menu.main]]
-    url = "/hugo/"
-    name = "hugo"
-    weight = 4
-
 [[menu.icon]]
     url = "mailto:onyou0031@naver.com"
     name = "envelope-o"
