@@ -2,7 +2,6 @@ baseURL = "https://MoonOnYou.github.io"
 languageCode = "en-us"
 title = "ONYOU'S  SITE"
 theme = "minimal"
-disqusShortname = "onyous-blog"
 
 [params]
     author = "onyou"
