@@ -1,12 +1,18 @@
 #!/bin/bash
-git submodule init
-git submodule update
+
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
+
+# [submodule]
+## content/Python
+cd content/Python
+git pull origin master
+git submodule update
+cd ../..
 
 # build
 hugo
