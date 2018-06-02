@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# submoudule update
 git submodule init
 git submodule update
 
