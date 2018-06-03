@@ -27,9 +27,14 @@ disqusShortname = "onyous-blog"
     weight = 2
 
 [[menu.main]]
-    url = "/Python/"
-    name = "Python"
+    url = "/Android/"
+    name = "Android"
     weight = 3
+
+[[menu.main]]
+    url = "/html,css/"
+    name = "html,css"
+    weight = 4
 
 [[menu.icon]]
     url = "mailto:onyou0031@naver.com"
