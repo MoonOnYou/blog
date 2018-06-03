@@ -7,13 +7,6 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 
-# [submodule]
-## content/Python
-cd content/Python
-git pull origin master
-git submodule update
-cd ../..
-
 # build
 hugo
 
