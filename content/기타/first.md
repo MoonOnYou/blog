@@ -1,7 +1,7 @@
 ---
 title: "First"
 date: 2018-06-03T03:33:33+09:00
-draft: true
+draft: false
 ---
 
 ## brackets
@@ -52,6 +52,4 @@ draft: true
 ***
 
 ## 포토샾
-1. 
-
 ***
