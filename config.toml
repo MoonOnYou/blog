@@ -32,8 +32,8 @@ disqusShortname = "onyous-blog"
     weight = 3
 
 [[menu.main]]
-    url = "/html,css/"
-    name = "html,css"
+    url = "/기타/"
+    name = "기타"
     weight = 4
 
 [[menu.icon]]
