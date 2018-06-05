@@ -36,6 +36,11 @@ disqusShortname = "onyous-blog"
     name = "기타"
     weight = 4
 
+[[menu.main]]
+    url = "/영어/"
+    name = "영어"
+    weight = 5
+
 [[menu.icon]]
     url = "mailto:onyou0031@naver.com"
     name = "envelope-o"
