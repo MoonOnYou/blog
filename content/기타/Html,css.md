@@ -29,7 +29,7 @@ draft: false
             2. 프로그래머를 위해* 액박떳을 경우 사용자를 위해
             3. 시각장애인을 고려하여 웹사이트를 제작할때
             4. 웹표준 점수가 좋아짐
-        ```
+      
 ***
 
 ## css
@@ -42,11 +42,16 @@ draft: false
     * ```<ul> <li>``` 초기화를 해주어야 pading이 0으로 되서 글이 가운데로 이쁘게 된다.
         
         * 예시 
+
         ```css
         h1,h2,body,p,ul{ margin: 0; padding: 0;} /모든 h2에있는 기본마진을 없애겟다/
+
         h1{ font-weight: normal; }
+
         li{ list-style-type: none; }
+
         a{ color: dimgray; text-decoration: none; }
+        
         a:hover, a:active{ text-decoration: none; color: dimgray; }
         ```
 
