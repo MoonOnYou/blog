@@ -68,34 +68,40 @@ draft: false
     ```
     public class Main3Activity extends AppCompatActivity {
 
-        private Realm realm; //Realm인스터스 클래스는 전역에서 사용하므로 클래스의 멤버변수로 선언하여 준다.
+        private Realm realm; //1
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate( savedInstanceState );
             setContentView( R.layout.activity_main3 );
 
-            Realm.init(getApplicationContext());
-            realm = Realm.getDefaultInstance();
-            //Realm메소드를 초기화하고, 인스턴스를 가져와 멤버변수에 할당해준다
+            Realm.init(getApplicationContext()); //2
+            realm = Realm.getDefaultInstance(); //2
+           
         }
 
         @Override
-        protected void onDestroy() {
-        super.onDestroy();
-        realm.close();
+        protected void onDestroy() { //3
+        super.onDestroy(); //3
+        realm.close(); //3
         }
     }
     ```
+    1) Realm인스터스 클래스는 전역에서 사용하므로 클래스의 멤버변수로 선언하여 준다.
+
+    2) Realm메소드를 초기화하고, 인스턴스를 가져와 멤버변수에 할당해준다
+
+    3) 사용이 끝나면 close()메소드를 통해 자원을 반환해 줘야하므로 onDestroy메소드를 오버라이딩 해준다.
+
     ㄴ. Kotlin예제
     ```
     class Main2Activity : AppCompatActivity() {
-    var realm:Realm? = null
+    var realm:Realm? = null //1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        Realm.init(applicationContext)
+        Realm.init(applicationContext) //2
         realm = Realm.getDefaultInstance()
     }
 
@@ -103,8 +109,12 @@ draft: false
         super.onDestroy()
         realm?.close()
     }
-}
-```
+    }
+    ```
+    1) 액티비티에서는 생성자가 아닌 onCreate메소드를 이용해 멤버변수를 초기화하므로 realm은 null이 가능한 타입, null로 초기화 해 두고 onCreate메소드에서 값을 할당하였다.
+
+    2) onCreate메소드에서의 초기화도 getter를 자동호출해주는 코틀린의 특징 덕분에 일반적인 변수처럼 applicationContext라고 명시하였다.
+
 4. insert , update 기능 메소드 구현하기
 
     * 예제
