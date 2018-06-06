@@ -145,20 +145,26 @@ draft: false
 
     * max 메소드를 통해 studentId필드의 최고값을 가져오라고 함
 
-    4) 데이터베이스에 아직 아무 값이 없다면 1을, 아닐 경우에는 최고값에 1을 더한값을 nextId로 부여한다. 그리고 student객체에도 값을 부여한다. 
+    4) 데이터베이스에 아직 아무 값이 없다면 1을, 아닐 경우에는 최고값에 1을 더한값을 nextId로 부여한다. 그리고 student객체에도 값을 부여
 
-    5) insertOrUpdate메소드를 통해 변경된 내용을 적용 시킨다. 여기서 insertOrUpdate를 구분하는 것은 PrimaryKey로 선언된 studentId 필드이며 중복되는 값이 있으면 Update로, 없으면 Insert로 처리해 준다.
+    5) insertOrUpdate메소드를 통해 변경된 내용을 적용 시킨다. 여기서 insertOrUpdate를 구분하는 것은 PrimaryKey로 선언된 studentId 필드이며 중복되는 값이 있으면 Update로, 없으면 Insert로 처리해줌
 
-    ㄴ. kotlin예제
+    ㄴ. kotlin예제 
     ```
     fun insertOrUpdate(student: Student) {
         realm?.executeTransaction { realm ->
             if (student.studentId == 0) {
-                val maxId = realm.where(Student::class.java).max("studentId")
-                val nextId = (maxId.toInt() ?: 0) + 1
-                student.studentId = nextId
+                val maxId = realm.where(Student::class.java).max("studentId") //1
+                val nextId = (maxId.toInt() ?: 0) + 1 //2
+                student.studentId = nextId //3
             }
             realm.insertOrUpdate(student)
         }
     }
     ```
+
+    1) Student::class.java 처럼 자바 Class 클래스를 받는 곳에 사용
+
+    2) ?: 문법을 이용하여 maxId가 Null일 경우에는 0, 아닐경우에는 maxId의 Ind값을 반환하여 1을 더하여 주게함
+
+    3) getter와 setter가 자동 호출되므로 studentId를 student객체에 넣어줄 때에도 'student.setStudentId( nextId );'가 아닌 = 을 사용.
