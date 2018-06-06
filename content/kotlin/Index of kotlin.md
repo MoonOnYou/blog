@@ -1,7 +1,7 @@
 ---
 title: "Index of Kotlin"
 date: 2018-05-13T21:39:23+09:00
-draft: false
+draft: true
 weight: 1
 ---
 # __Index__
