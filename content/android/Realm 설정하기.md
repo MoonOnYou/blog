@@ -24,7 +24,7 @@ draft: true
 
 > 데이터 베이스와 매피할 ORM클래스를 정의 한다.
 
-    * 예제 (학생정보 관리)
+* 예제 (학생정보 관리)
 
     ```java
     public class Student extends RealmObject //ReamlObject클래스를 상속 받으면 Reaml의 매핑 클래스가 된다.

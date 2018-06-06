@@ -8,9 +8,9 @@ draft: false
 
 ### Manifest
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.Manifest
 
     Manifest.permission.READ_EXTERNAL_STORAGE
@@ -20,9 +20,9 @@ draft: false
 
 ### AppCompatActivity
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.support.v7.app.AppCompatActivity
 
     class MainActivity : AppCompatActivity() { ... }
@@ -32,9 +32,9 @@ draft: false
 
 > String값부터 다양한 parcelable type( 기본 type이 아닌 class객체를 activity 간에 주고 받기 위한 타입)까지 mapping해줌 
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.os.Bundle
 
     override fun onCreate(savedInstanceState: Bundle?) { ... }
@@ -42,9 +42,9 @@ draft: false
 
 ### PackageManager
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.content.pm.PackageManager
 
     PackageManager.PERMISSION_GRANTED
@@ -52,9 +52,9 @@ draft: false
 
 ### ActivityCompat
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.support.v4.app.ActivityCompat
 
     ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 100)
@@ -62,9 +62,9 @@ draft: false
 
 ### ContextCompat
 
-    * 사용예
+* 사용예
 
-    ```kotlin
+    ```
     import android.support.v4.content.ContextCompat
 
     ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -74,6 +74,7 @@ draft: false
 
 > 안드로이드 어플리케이션 구성요소 중 Activity를 사용하겠다고 선언
 
-```
-import android.app.Activity
-```
+* 사용예
+    ```
+    import android.app.Activity
+    ```

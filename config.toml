@@ -32,13 +32,13 @@ disqusShortname = "onyous-blog"
     weight = 3
 
 [[menu.main]]
-    url = "/기타/"
-    name = "기타"
+    url = "/etc/"
+    name = "etc"
     weight = 4
 
 [[menu.main]]
-    url = "/영어/"
-    name = "영어"
+    url = "/English/"
+    name = "English"
     weight = 5
 
 [[menu.icon]]
