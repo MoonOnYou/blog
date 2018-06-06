@@ -54,12 +54,12 @@ draft: false
                                    open var grade:Int? = null) : RealmObject()
 
     ```
-    1) 필드를 수정해야 할 상황이 생길 수 있으므로 var으로 선언.
+    * 필드를 수정해야 할 상황이 생길 수 있으므로 var으로 선언.
 
-    2) 인자가 없는 생성자를 생략해주기 위해 기본값을 모두 설정.
+    * 인자가 없는 생성자를 생략해주기 위해 기본값을 모두 설정.
     
-    3) 상속이 가능 하도록 open.                           
-    4) getter,setter 없음.
+    * 상속이 가능 하도록 open.                           
+    * getter,setter 없음.
 
 3. 사용 설정 
     * 예제
@@ -105,3 +105,24 @@ draft: false
     }
 }
 ```
+4. insert , update 기능 메소드 구현하기
+
+    * 예제
+
+    ```
+    private void insnertOrUpdateV1(final Student student) {
+        realm.beginTransaction(); //1
+        if(student.getStudentId() == 0) {
+            Number maxId = realm.where( Student.class ).max( "StudentId" ); //3
+            int nextId = maxId == null ? 1: maxId.intValue() + 1;
+            student.setStudentId( nextId );
+        }
+        realm.insertOrUpdate( student );
+        realm.commitTransaction(); //2
+    }
+    ```
+    1) realm.beginTransaction(); 메소드로 트렌젝션의 시작을 알림
+
+    2) realm.commitTransaction(); 메소드로 트렌젝션의 종료를 알림과 동시에 변경사항을 적용
+
+    3) realm.where 메소드로 어떤 모델에서 값을 조회할 것인지 설정
