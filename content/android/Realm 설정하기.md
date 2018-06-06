@@ -1,7 +1,7 @@
 ---
 title: "Realm 설정하기"
 date: 2018-06-05T20:20:13+09:00
-draft: true
+draft: false
 ---
 
 1. 의존성 설정

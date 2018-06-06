@@ -75,6 +75,7 @@ draft: false
 > 안드로이드 어플리케이션 구성요소 중 Activity를 사용하겠다고 선언
 
 * 사용예
+
     ```
     import android.app.Activity
     ```
