@@ -4,6 +4,9 @@ date: 2018-06-05T20:20:13+09:00
 draft: false
 ---
 
+## Realm
+> 예제는 학생정보 관리
+
 1. 의존성 설정
 
     a. 프로젝트 build.gradle 파일의 dependancies안에 아래의 문구를 추가한다.
@@ -23,8 +26,6 @@ draft: false
 2. 모델 클래스
 
     a. 데이터 베이스와 매핑할 ORM클래스를 정의 한다.
-
-    * 예제 (학생정보 관리)
 
     ㄱ. JAVA예제
 
@@ -62,7 +63,6 @@ draft: false
     * getter,setter 없음.
 
 3. 사용 설정 
-    * 예제
 
     ㄱ. java예제
     ```
@@ -121,8 +121,6 @@ draft: false
 
 4. insert , update 기능 메소드 구현하기
 
-    * 예제
-
     ㄱ. java예제 
 
     ```
@@ -168,3 +166,32 @@ draft: false
     2) ?: 문법을 이용하여 maxId가 Null일 경우에는 0, 아닐경우에는 maxId의 Ind값을 반환하여 1을 더하여 주게함
 
     3) getter와 setter가 자동 호출되므로 studentId를 student객체에 넣어줄 때에도 'student.setStudentId( nextId );'가 아닌 = 을 사용.
+
+5. 정보 입력하기 
+
+    ㄱ. 자바예제
+    ```
+    Student student1 = new Student();
+            student1.setStudentId( 1 );
+            student1.setName( "박중수" );
+            student1.setAge( 26 );
+            student1.setGrade( 4 );
+
+            Student student2 = new Student();
+            student2.setStudentId( 2 );
+            student2.setName( "박영환" );
+            student2.setAge( 27 );
+            student2.setGrade( 4 );
+
+            insnertOrUpdateV( student1 );
+            insnertOrUpdateV( student2 );
+    ```
+
+    ㄴ. 코틀린 예제
+    ```
+    val student1 = Student(1,"박중수",26,4)
+            val student2 = Student(2,"박영환",27,4)
+
+            insertOrUpdate(student1)
+            insertOrUpdate(student2)
+    ```
