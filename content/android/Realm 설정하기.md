@@ -195,3 +195,5 @@ draft: false
             insertOrUpdate(student1)
             insertOrUpdate(student2)
     ```
+
+    6. Select 
