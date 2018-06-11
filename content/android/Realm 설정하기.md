@@ -199,7 +199,8 @@ draft: false
 6. Select 
 
     ㄱ. 자바예제 
-    - 전체를 불러오는 메소드  
+
+    a. 전체를 불러오는 메소드  
     ```
     private List<Student> findAll(){
         RealmResults<Student> results = realm.where(Student.class) //1
@@ -214,12 +215,13 @@ draft: false
     
     2) findAll()메소드를 통해 모든 결과를 가져오도록 함
 
-    3) 받아온 결과는
+    1,3) 받아온 결과는 RealmResults 라는 객체에 담기게 된다
 
-    4)
     * RealmResults<E> 클래스는 List<E>인터페이스를 상속받은 클래스이기에 다향성을 이용해 List에 담을 수 있다. 이 코드는 이를 이용해 List형식으로 반환했다.
+
+    4) __오름차순__ 정렬을 해주었다
     
-    - id를 조건으로 데이터를 불러오는 메소드 
+    b. id를 조건으로 데이터를 불러오는 메소드 
     ```
     private Student findOndeById(int studentId){
         Student results = realm.where(Student.class)
