@@ -196,4 +196,50 @@ draft: false
             insertOrUpdate(student2)
     ```
 
-    6. Select 
+6. Select 
+
+    ㄱ. 자바예제 
+    - 전체를 불러오는 메소드  
+    ```
+    private List<Student> findAll(){
+        RealmResults<Student> results = realm.where(Student.class) //1
+                .findAll() //2
+                .sort("studentId", Sort.DESCENDING); //4
+        List<Student> list = results; //3
+
+        return  list;
+    }
+    ```
+    1) where메소드를 통해 Student에서 찾을것을 realm에게 알려줌
+    
+    2) findAll()메소드를 통해 모든 결과를 가져오도록 함
+
+    3) 받아온 결과는
+
+    4)
+    * RealmResults<E> 클래스는 List<E>인터페이스를 상속받은 클래스이기에 다향성을 이용해 List에 담을 수 있다. 이 코드는 이를 이용해 List형식으로 반환했다.
+    
+    - id를 조건으로 데이터를 불러오는 메소드 
+    ```
+    private Student findOndeById(int studentId){
+        Student results = realm.where(Student.class)
+                .equalTo("studentId",studentId)
+                .findFirst();
+        return results;
+    }
+    ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_책 ' 자바 개발자를 위한 kotlin (박중수 저) ' 를 보고 정리하였습니다_
