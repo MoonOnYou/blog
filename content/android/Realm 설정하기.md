@@ -5,9 +5,12 @@ draft: false
 ---
 
 ## Realm
+
 > 예제는 학생정보 관리
 
-1. 의존성 설정
+> '숫자)' 는 숫자와 일치하는 주석의 코드를 풀이
+
+1. __의존성 설정__
 
     a. 프로젝트 build.gradle 파일의 dependancies안에 아래의 문구를 추가한다.
 
@@ -23,7 +26,7 @@ draft: false
 
     c. Sync Now 를 클릭하여 스크립트를 적용한다. 
 
-2. 모델 클래스
+2. __모델 클래스__
 
     a. 데이터 베이스와 매핑할 ORM클래스를 정의 한다.
 
@@ -62,7 +65,7 @@ draft: false
     * 상속이 가능 하도록 open.                           
     * getter,setter 없음.
 
-3. 사용 설정 
+3. __사용 설정__
 
     ㄱ. java예제
     ```
@@ -119,7 +122,7 @@ draft: false
        
     * java에서는 private으로 되어있는 Context를 가지고 오기 위해 getApplicationContext라는 getter함수를 호출하고 있는데 kotlin에서는 그럴 필요가 없이 바로 applicationContext로 부를 수 있는 것. 
 
-4. insert , update 기능 메소드 구현하기
+4. __insert , update 기능 메소드 구현하기__
 
     ㄱ. java예제 
 
@@ -167,7 +170,7 @@ draft: false
 
     3) getter와 setter가 자동 호출되므로 studentId를 student객체에 넣어줄 때에도 'student.setStudentId( nextId );'가 아닌 = 을 사용.
 
-5. 정보 입력하기 
+5. __정보 입력하기__
 
     ㄱ. 자바예제
     ```
@@ -196,11 +199,14 @@ draft: false
             insertOrUpdate(student2)
     ```
 
-6. Select 
+6. __Select__
+
+    __6.1 데이터 불러오기__
 
     ㄱ. 자바예제 
 
     a. 전체를 불러오는 메소드  
+
     ```
     private List<Student> findAll(){
         RealmResults<Student> results = realm.where(Student.class) //1
@@ -211,6 +217,12 @@ draft: false
         return  list;
     }
     ```
+    > (+)위에코드에서 특정 인덱스의 값 불러오고싶을땐 다음 코드를 추가
+        
+    ```
+    Student student = results.get(2);
+    ```
+
     1) where메소드를 통해 Student에서 찾을것을 realm에게 알려줌
     
     2) findAll()메소드를 통해 모든 결과를 가져오도록 함
@@ -219,26 +231,46 @@ draft: false
 
     * RealmResults<E> 클래스는 List<E>인터페이스를 상속받은 클래스이기에 다향성을 이용해 List에 담을 수 있다. 이 코드는 이를 이용해 List형식으로 반환했다.
 
-    4) __오름차순__ 정렬을 해주었다
+    4) 오름차순 정렬을 해주었다
     
     b. id를 조건으로 데이터를 불러오는 메소드 
+
     ```
     private Student findOndeById(int studentId){
-        Student results = realm.where(Student.class)
-                .equalTo("studentId",studentId)
-                .findFirst();
+        Student results = realm.where(Student.class) //1
+                .equalTo("studentId",studentId) //2
+                .findFirst(); //3
         return results;
     }
     ```
 
+    1) where메소드를 통해 Student에서 찾을것을 realm에게 알려줌
 
+    2) equalTo메소드를 통해 일치해야하는 조건 갑을 알려줌 
+    
+    * 첫번째 매개변수는 필드이름, 두번째는 일치해야하는 필드의 값
 
+    * equalTo메소드 뒤에도 Like, endsWith 등의 조건을 추가할 수 있다. ( 지연연산을 통해 효율적으로 실행됨)
 
+    3) findFirst()메소드를 통해 일치하는 상위 1개의 필드만 가져오게 함
 
+    * 만약 일치하는 모든 것을 가져오고 신다면 findAll()메소드를 이용
 
+    __6.2 데이터 출력하기__
 
+    a. 원하는 activity.xml 파일안에 출력을 원하는 TextView를 만들어 아이디 지정.
 
+    b. 원하는 Activity.java(또는 kotlin) 에서 멤버변수로 TextView객체를 원하는 이름과 함께 추가 
 
+    ```
+    private TextView name;
+    ```
+
+    c. onCreate에 뷰를 불러오는 코드를 작성
+
+    ```
+    name = (TextView)findById(R.id.TextView의 id이름)
+    ```
 
 
 
