@@ -8,11 +8,11 @@ weight: 1
 
 - 코틀린에서 쓰이는 자바 키워드도 함께 정리함
 
-----------------------------------------------------
------------------------------------------------
 
 ## ___A___
-## [__a__bsract](#absract) [__a__s?](#as,as?)
+
+# [__a__bsract](#absract) [__a__s?](#as,as?)
+
 ## [__a__dd()](#add()) [__a__nd()](#and()) [__a__rrayListOf()](#arrayListOf()) [__a__rrayOf()](#arrayOf)
 
 ----------------------------------------------------------
@@ -45,7 +45,9 @@ weight: 1
 ## _H_
 ------------------------------------------
 ## ___I___
-## [__i__f](#if) [__i__n](#in) [__i__nfix](#infix) [__i__nit](#init) [__i__nstanceof](#instanceof) [__i__nterface](#interface) [__i__s?](#is,is?) [__i__t](#it)
+## [__i__f](#if) [__i__n](#in) [__i__nfix](#infix) [__i__nit](#init) [__i__nstanceof](#instanceof) [__i__nterface](#interface) 
+[__i__s?](/kotlin/코틀린 기본문법, 코틀린 특징.md/# 코틀린의 표현식 if, when) 
+[__i__t](#it)
 ## [__i__nvoke()](#invoke)
 --------------------------------------
 ## _G_
@@ -61,6 +63,7 @@ weight: 1
 ## _T_
 ## _U_
 ## _V_
+
 ## _W_
 ## _X_
 ## _Y_

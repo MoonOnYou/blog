@@ -30,7 +30,7 @@ draft: false
 
     a. 데이터 베이스와 매핑할 ORM클래스를 정의 한다.
 
-    ㄱ. JAVA예제
+    _ㄱ. JAVA예제_
 
     ```java
     public class Student extends RealmObject //1
@@ -50,7 +50,7 @@ draft: false
     2) @PrimaryKey어노테이션으로 기본키 옵션을 준다.
     <br>
 
-    ㄴ. Kotlin예제 
+    _ㄴ. Kotlin예제_
     ```
     open class Student(@primaryKey open var studentId:Int? = null,  
                                    open var name:String? = null,
@@ -67,7 +67,7 @@ draft: false
 
 3. __사용 설정__
 
-    ㄱ. java예제
+    _ㄱ. java예제_
     ```
     public class Main3Activity extends AppCompatActivity {
 
@@ -95,7 +95,8 @@ draft: false
 
     3) 사용이 끝나면 close()메소드를 통해 자원을 반환해 줘야하므로 onDestroy메소드를 오버라이딩 해준다.
 
-    ㄴ. Kotlin예제
+    _ㄴ. Kotlin예제_
+
     ```
     class Main2Activity : AppCompatActivity() {
     var realm:Realm? = null //1
@@ -124,7 +125,7 @@ draft: false
 
 4. __insert , update 기능 메소드 구현하기__
 
-    ㄱ. java예제 
+    _ㄱ. java예제_
 
     ```
     private void insnertOrUpdateV1(final Student student) {
@@ -150,7 +151,8 @@ draft: false
 
     5) insertOrUpdate메소드를 통해 변경된 내용을 적용 시킨다. 여기서 insertOrUpdate를 구분하는 것은 PrimaryKey로 선언된 studentId 필드이며 중복되는 값이 있으면 Update로, 없으면 Insert로 처리해줌
 
-    ㄴ. kotlin예제 
+    _ㄴ. kotlin예제_
+
     ```
     fun insertOrUpdate(student: Student) {
         realm?.executeTransaction { realm ->
@@ -172,7 +174,8 @@ draft: false
 
 5. __정보 입력하기__
 
-    ㄱ. 자바예제
+    _ㄱ. 자바예제_
+
     ```
     Student student1 = new Student();
             student1.setStudentId( 1 );
@@ -190,7 +193,7 @@ draft: false
             insnertOrUpdateV( student2 );
     ```
 
-    ㄴ. 코틀린 예제
+    _ㄴ. kotlin 예제_
     ```
     val student1 = Student(1,"박중수",26,4)
             val student2 = Student(2,"박영환",27,4)
@@ -203,7 +206,7 @@ draft: false
 
     __6.1 데이터 불러오기__
 
-    ㄱ. 자바예제 
+    _ㄱ. java 예제_ 
 
     a. 전체를 불러오는 메소드  
 
@@ -255,6 +258,29 @@ draft: false
     3) findFirst()메소드를 통해 일치하는 상위 1개의 필드만 가져오게 함
 
     * 만약 일치하는 모든 것을 가져오고 신다면 findAll()메소드를 이용
+
+    _ㄴ. kotlin 예제_
+
+    a. 전체를 불러오는 메소드 
+    ```
+    fun findAll(): List<Student>? {
+        val results = realm?.where(Student::class.java)
+                ?.findAll()
+                ?.sort("student", Sort.DESCENDING)
+
+        return results
+    }
+    ```
+    
+    b. id를 조건으로 테이터를 불러오는 메소드 
+    ```
+        fun findOneById(studentId: Int): Student? {
+        val result = realm?.where(Student::class.java)
+                ?.findFirst()
+
+        return result
+    }
+    ```
 
     __6.2 데이터 출력하기__
 
