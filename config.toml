@@ -8,7 +8,7 @@ disqusShortname = "onyous-blog"
     author = "onyou"
     description = "공유로 만드는 아름다운 세상"
     githubUsername = "#"
-    accent = "pink"
+    accent = "red"
     showBorder = true
     backgroundColor = "white"
     font = "Raleway" # should match the name on Google Fonts!
@@ -22,8 +22,8 @@ disqusShortname = "onyous-blog"
     weight = 1
 
 [[menu.main]]
-    url = "/kotlin/"
-    name = "kotlin"
+    url = "/Ubuntu/"
+    name = "Ubuntu"
     weight = 2
 
 [[menu.main]]
@@ -32,14 +32,21 @@ disqusShortname = "onyous-blog"
     weight = 3
 
 [[menu.main]]
-    url = "/etc/"
-    name = "etc"
+    url = "/kotlin/"
+    name = "kotlin"
     weight = 4
 
 [[menu.main]]
     url = "/English/"
     name = "English"
     weight = 5
+
+[[menu.main]]
+    url = "/etc/"
+    name = "etc"
+    weight = 6
+
+
 
 [[menu.icon]]
     url = "mailto:onyou0031@naver.com"
