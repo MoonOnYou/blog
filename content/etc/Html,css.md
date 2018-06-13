@@ -9,7 +9,7 @@ draft: false
 1. Ctrl + D : 한줄 복사 및 생성
 * __모든 단축키에 Shift를 더하면 반대가 된다.__
         
-    * 예시
+    * _예시_
     
     ```
     Shift + Ctrl + D // 한 줄 삭제 
@@ -42,7 +42,7 @@ draft: false
 
     * ```<ul> <li>``` 초기화를 해주어야 pading이 0으로 되서 글이 가운데로 이쁘게 된다.
         
-        * 예시 
+        * _예시_ 
 
         ```css
         h1,h2,body,p,ul{ margin: 0; padding: 0;} /모든 h2에있는 기본마진을 없애겟다/
