@@ -25,6 +25,7 @@ draft: false
     * I don’t like some Americans → 나는 몇몇 미국인들을 안 좋아한다
 
 <br><br>
+
 * __any : 어떤 ~이라도 , 어떤 것 ~라도__
 
 1. 부정문 any
