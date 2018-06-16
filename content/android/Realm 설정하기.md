@@ -266,7 +266,7 @@ draft: false
     fun findAll(): List<Student>? {
         val results = realm?.where(Student::class.java)
                 ?.findAll()
-                ?.sort("student", Sort.DESCENDING)
+                ?.sort("studentId", Sort.DESCENDING)
 
         return results
     }
@@ -276,6 +276,7 @@ draft: false
     ```
         fun findOneById(studentId: Int): Student? {
         val result = realm?.where(Student::class.java)
+                ?.equalTo("studentId",studentId)
                 ?.findFirst()
 
         return result
@@ -286,18 +287,107 @@ draft: false
 
     a. 원하는 activity.xml 파일안에 출력을 원하는 TextView를 만들어 아이디 지정.
 
-    b. 원하는 Activity.java(또는 kotlin) 에서 멤버변수로 TextView객체를 원하는 이름과 함께 추가 
-
-    ```
-    private TextView name;
-    ```
+    b. 원하는 Activity.java(또는 kotlin) 에서 클래스 멤버변수로 TextView객체를 원하는 이름과 함께 추가 
 
     c. onCreate에 뷰를 불러오는 코드를 작성
 
+    d. 미리만들어 놓은 메소드로 데이터를 불러와 화면에 출력하는 코드 작성 
+
+    _ㄱ. java예제_
+    
+    > b,c,d 순
+    
+    ```
+    private TextView name;
+    ```
+    
     ```
     name = (TextView)findById(R.id.TextView의 id이름)
     ```
 
+    ```
+    List<Student> studentList = findAll();
+    Student oneStudend = findOndeById( 1 );
+
+    StringBuilder sb = new StringBuilder( );
+    sb.append( "== List == \n" );
+        if(studentList != null) {
+            for (Student student : studentList) {
+                sb.append( student.getStudentId() )
+                        .append( ". " )
+                        .append( student.getName() )
+                        .append( " - " )
+                        .append( student.getAge() )
+                        .append( "살 - " )
+                        .append( student.getGrade() )
+                        .append( "학년\n" );
+            }
+        }
+
+        if(oneStudend != null) {
+            sb.append( "\n\n==Select One==\n\n" )
+                    .append( oneStudend.getStudentId() )
+                    .append( ". " )
+                    .append( oneStudend.getName() )
+                    .append( " - " )
+                    .append( oneStudend.getAge() )
+                    .append( "살 - " )
+                    .append( oneStudend.getGrade())
+                    .append( "학년\n" );
+        }
+
+        textView.setText( sb.toString() );
+    ```
+
+    _ㄴ. kotlin예제_
+
+    > b,c,d 순
+
+    ```
+    name = findViewById(R.id.view_txt) as TextView
+    ```
+
+    ```
+    var name:TextView? = null
+    ```
+
+    ```
+    val studentList = findAll()
+    val oneStudent = findOneById(1)
+
+    val sb = StringBuilder()
+
+    sb.append("==List==\n")
+    studentList?.let {
+        for (student in it) {
+            sb.append(student.studentId)
+                    .append(".")
+                    .append(student.name)
+                    .append(" - ")
+                    .append(student.age)
+                    .append("살 - ")
+                    .append(student.grade)
+                    .append("학년\n")
+            }
+        }
+
+    oneStudent?.let {
+        sb.append("\n\n== Select One ==\n")
+                .append(oneStudent.studentId)
+                .append(". ")
+                .append(oneStudent.name)
+                .append(" - ")
+                .append(oneStudent.age)
+                .append("살 - ")
+                .append(oneStudent.grade)
+                .append("학년\n")
+        }
+
+        textView?.text = sb.toString()
+    ```
+
+6. __Delete__
+ 
 
 
 
