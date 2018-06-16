@@ -178,28 +178,28 @@ draft: false
 
     ```
     Student student1 = new Student();
-            student1.setStudentId( 1 );
-            student1.setName( "박중수" );
-            student1.setAge( 26 );
-            student1.setGrade( 4 );
+    student1.setStudentId( 1 );
+    student1.setName( "박중수" );
+    student1.setAge( 26 );
+    student1.setGrade( 4 );
 
-            Student student2 = new Student();
-            student2.setStudentId( 2 );
-            student2.setName( "박영환" );
-            student2.setAge( 27 );
-            student2.setGrade( 4 );
+    Student student2 = new Student();
+    student2.setStudentId( 2 );
+    student2.setName( "박영환" );
+    student2.setAge( 27 );
+    student2.setGrade( 4 );
 
-            insnertOrUpdateV( student1 );
-            insnertOrUpdateV( student2 );
+    insnertOrUpdateV( student1 );
+    insnertOrUpdateV( student2 );
     ```
 
     _ㄴ. kotlin 예제_
     ```
     val student1 = Student(1,"박중수",26,4)
-            val student2 = Student(2,"박영환",27,4)
+    val student2 = Student(2,"박영환",27,4)
 
-            insertOrUpdate(student1)
-            insertOrUpdate(student2)
+    insertOrUpdate(student1)
+    insertOrUpdate(student2)
     ```
 
 6. __Select__
@@ -274,10 +274,10 @@ draft: false
     
     b. id를 조건으로 테이터를 불러오는 메소드 
     ```
-        fun findOneById(studentId: Int): Student? {
-        val result = realm?.where(Student::class.java)
-                ?.equalTo("studentId",studentId)
-                ?.findFirst()
+    fun findOneById(studentId: Int): Student? {
+    val result = realm?.where(Student::class.java)
+            ?.equalTo("studentId",studentId)
+            ?.findFirst()
 
         return result
     }
@@ -368,8 +368,8 @@ draft: false
                     .append("살 - ")
                     .append(student.grade)
                     .append("학년\n")
-            }
         }
+    }
 
     oneStudent?.let {
         sb.append("\n\n== Select One ==\n")
@@ -381,13 +381,33 @@ draft: false
                 .append("살 - ")
                 .append(oneStudent.grade)
                 .append("학년\n")
-        }
+    }
 
-        textView?.text = sb.toString()
+    textView?.text = sb.toString()
     ```
 
 6. __Delete__
- 
+
+> 삭제에는 쓰기 ,수정과 같이 트랜잭션 블록을 이용하는 방법과 begin, commit Transaction 코드를 이용하는 방법 두 가지가 있음
+
+> 이 책에서 저자는 트랜잭션 블록을 사용함
+
+_ㄱ. java예제_
+
+    private void deleteById(final int studentId) {
+        realm.executeTransaction( new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                Student targetStudent = realm.where( Student.class )
+                            .equalTo( "studentId",studentId )
+                            .findFirst();
+
+                targetStudent.deleteFromRealm();
+            }
+        });
+    }
+
+    
 
 
 
