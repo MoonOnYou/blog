@@ -388,6 +388,8 @@ draft: false
 
 6. __Delete__
 
+> 예제는 id를 조건으로 하는 삭제 코드임 
+
 > 삭제에는 쓰기 ,수정과 같이 트랜잭션 블록을 이용하는 방법과 begin, commit Transaction 코드를 이용하는 방법 두 가지가 있음
 
 > 이 책에서 저자는 트랜잭션 블록을 사용함
@@ -407,8 +409,18 @@ _ㄱ. java예제_
         });
     }
 
-    
 
+_ㄴ. kotlin예제_
+
+    private fun deleteById(studentId: Int) {
+        realm?.executeTransaction {
+            val targetStudent = it.where(Student::class.java)
+                    .equalTo("studentId",studentId)
+                    .findFirst()
+
+            targetStudent.deleteFromRealm()
+        }
+    }
 
 
 
