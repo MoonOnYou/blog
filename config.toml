@@ -37,14 +37,19 @@ disqusShortname = "onyous-blog"
     weight = 4
 
 [[menu.main]]
+    url = "/Design/"
+    name = "Design"
+    weight = 5
+
+[[menu.main]]
     url = "/English/"
     name = "English"
-    weight = 5
+    weight = 6
 
 [[menu.main]]
     url = "/etc/"
     name = "etc"
-    weight = 6
+    weight = 7
 
 
 
