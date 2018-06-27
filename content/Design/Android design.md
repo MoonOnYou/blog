@@ -1,7 +1,7 @@
 ---
 title: "Android design"
 date: 2018-06-24T00:32:35+09:00
-draft: true
+draft: false
 ---
 
 # 안드로이드에 구글 폰트(무료) 적용하기 
@@ -26,3 +26,13 @@ TextView textView = findViewById( R.id.fistTitle );
         Typeface typeface = Typeface.createFromAsset( getAssets(),"onyou.ttf" );
         textView.setTypeface( typeface );
 ```
+
+# 무료 아이콘 다운로드 사이트 
+
+> [flaticon](https://www.flaticon.com/)
+
+1. 마음에 드는 아이콘을 선택한다
+    - 왕관은 유료 아닌것은 무료이다 
+    - 가로로 쭉 나열되 있는 것들은 다른 사이트로 넘어가는데 좀 귀찮음, 그냥 해당사이트게 젤 편함
+
+2. 원하는 확장자를 누르면 색상, 크기를 선택할 수 있고, 두번째에 있는 Free download 눌러서 무료로 다운로드 한다  
