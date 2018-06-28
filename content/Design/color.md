@@ -2,7 +2,7 @@
 title: "Color"
 date: 2018-06-24T01:13:45+09:00
 draft: false
-tags = ["색상 참고 사이트"] 
+
 ---
 
 # 컴퓨터에서의 색 
