@@ -35,6 +35,7 @@ TextView textView = findViewById( R.id.fistTitle );
 > [flaticon](https://www.flaticon.com/)
 
 1. 마음에 드는 아이콘을 선택한다
+   
     - 왕관은 유료 아닌것은 무료이다 
     - 가로로 쭉 나열되 있는 것들은 다른 사이트로 넘어가는데 좀 귀찮음, 그냥 해당사이트게 젤 편함
 
