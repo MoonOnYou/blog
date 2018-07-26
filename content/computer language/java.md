@@ -1,7 +1,7 @@
 ---
 title: "Java"
 date: 2018-07-26T21:30:09+09:00
-draft: true
+draft: false
 ---
 
 # 자주 사용하는 String 클래스 함수
@@ -107,6 +107,7 @@ Systrm.out.println("문자열의 두번째 문자는 " + f + "입니다");
 * indexOf
 
 > 특정 문자열에서 검색 문자열의 인덱스를 반환  
+
 > 인텍스인 int, 없으면 -1반환
 
 ```java
