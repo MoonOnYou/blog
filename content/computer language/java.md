@@ -3,7 +3,6 @@ title: "Java"
 date: 2018-07-26T21:30:09+09:00
 draft: false
 ---
-
 # 자주 사용하는 String 클래스 함수
 
 > 문자열은 char(문자형)이 배열로 이루어져 있기 때문에 문자열이라고 하는 것임
@@ -98,11 +97,41 @@ Systrm.out.println("문자열의 두번째 문자는 " + f + "입니다");
 ```
 
 ## 특정 위치의 문자열 반환
-### trim : 문자열 맨앞과 맨뒤의 공백 제거 
+
+### subString(string반환) 
+
+> index가 이렇게 되있다고 생각하면됨
+
+|  | 가| |나|   |다|  |라|  | 
+|--|---|-|--|--|---|-|---|-|
+|0 |   |1|  |2 |   |3|   |4|  
+
+1. 파라미터(정수)가 하나 일 경우 : 파라미터 값에 해당하는 인덱스 부터 끝까지 출력됨
+
+```java
+System.out.println(e.subString(6));
+```
+    > "사아자"가 출력 
+
+2. 파라미터(정수)가 두개 일 경우 : 첫번째 파라미터값에 해당하는 인덱스 부터 두번쩨 파라미터값에 해당하는 인덱스 까지 출력
+
+```java
+System.out.println(e.subString(2,6));
+```
+    > "나다라마바"가 출력 
 
 
 
-## 문자열 검색 함수 : indexOf/int(index) 또는 -1 , contains/boolean
+## 문자열 검색 함수 
+
+### indexOf(index에 해당하는 int 또는 -1 반환)
+
+```java
+int g = e.indexOf("갸");
+System.out.println("갸는 문자열에서 " + g + "번째 있습니다");
+```
+
+### contains(boolean 반환)
 
 * indexOf
 
@@ -113,3 +142,6 @@ Systrm.out.println("문자열의 두번째 문자는 " + f + "입니다");
 ```java
 
 int position = array.indexOf("가"); 
+````
+
+### trim : 문자열 맨앞과 맨뒤의 공백 제거 
