@@ -2,6 +2,8 @@
 title: "Study"
 date: 2018-06-03T18:35:32+09:00
 draft: true
+categories: ["android"]
+
 ---
 
 # android 

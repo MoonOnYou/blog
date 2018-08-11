@@ -2,6 +2,7 @@
 title: "Android design"
 date: 2018-06-24T00:32:35+09:00
 draft: false
+categories: ["android"]
 
 ---
 

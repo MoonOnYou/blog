@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "ONYOU'S  SITE"
 theme = "hugo-theme-dream"
 disqusShortname = "onyous-blog"
+defaultContentLanguage = "en"
+sectionPagesMenu = "main"
 
 [params]
     author = "onyou"
@@ -16,15 +18,19 @@ disqusShortname = "onyous-blog"
     highlightStyle = "solarized-dark"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 
+    
 [[menu.main]]
     url = "/"
     name = "ONYOU'S HOME"
     weight = 1
 
 [[menu.main]]
+    identifier = "OS"
     url = "/OS/"
     name = "OS"
+    pre = "<i class='fa fa-heart'></i>"
     weight = 2
+    title = "OS"
 
 [[menu.main]]
     url = "/Android/"

@@ -2,6 +2,8 @@
 title: "Gradle"
 date: 2018-06-07T23:19:53+09:00
 draft: true
+categories: ["android"]
+
 ---
 
 # Installing with a package manager
