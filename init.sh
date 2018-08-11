@@ -5,15 +5,15 @@ git submodule update
 
 if [ -e themes/minimal/.git ]
 then
-    echo "minimal exists"
+    echo "hugo-theme-dream exists"
     # cd themes/minimal/
     # git checkout .
     # git pull origin master
     # cd ../..
 else
-    echo "minimal download..."
+    echo "hugo-theme-dream download..."
     cd themes/
-    git clone https://github.com/calintat/minimal.git minimal
+    git clone https://github.com/g1eny0ung/hugo-theme-dream.git hugo-theme-dream
     cd ..
 fi
 git checkout master
